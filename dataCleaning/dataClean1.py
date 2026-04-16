@@ -1,0 +1,30 @@
+#Data cleaning using pandas
+import pandas as pd
+import matplotlib.pyplot as plt
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', None)
+pd.set_option('display.max_rows', None)
+dataset = pd.read_csv('loan.csv')
+# print(type(dataset))
+# print(dataset)
+# print(dataset.head(10))
+# print(dataset.tail())
+# print(dataset.shape)
+# tot_data = dataset.shape[0]*dataset.shape[1]
+# print(tot_data)
+# print((dataset.isnull().sum().sum()/tot_data)*100)pip
+# print(dataset.isnull().sum()/dataset.shape[0]*100)
+# dataset = dataset.dropna()
+# data.dropna(inplace=True)
+# print(dataset.isnull().sum())
+# dataset = dataset.drop(columns=["Credit_History"])
+# # print(dataset.shape)
+# dataset.dropna(inplace=True)
+# print(dataset.shape)
+dataset = dataset.drop(columns = ['Credit_History'])
+# sns.heatmap(dataset.isnull())
+# plt.show()
+dataset.dropna(inplace = True)
+# sns.heatmap(dataset.isnull())
+# plt.show()
+# print(dataset.isnull().sum())

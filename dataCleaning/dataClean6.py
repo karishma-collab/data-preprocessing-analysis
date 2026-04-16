@@ -1,0 +1,27 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+sec_a = np.array([75,65,73,68,72,67])
+sec_b = np.array([90,47,43,96,93,51])
+# sec_a_mean = sec_a.mean()
+# sec_b_mean = sec_b.mean()
+sec_a_mean = np.mean(sec_a)
+sec_b_mean = np.mean(sec_b)
+# print(sec_a_mean)
+# print(sec_b_mean)
+y=np.array([1,2,3,4,5,6])
+# plt.scatter(sec_a,y,color='red',label='sec_a')
+# plt.scatter(sec_b,y,color='blue',label='sec_b')
+# plt.plot([70,70,70,70,70,70],y,color='green',label='sec_a_mean')
+# plt.legend()
+# plt.show()
+mad_a = np.sum(abs(sec_a-sec_a_mean))/len(sec_a)
+mad_b = np.sum(abs(sec_b-sec_b_mean))/len(sec_b)
+# print(mad_a,mad_b)
+std_a = np.std(sec_a)
+std_b = np.std(sec_b)
+# print(std_a,std_b)
+var_a = np.var(sec_a)
+var_b = np.var(sec_b)
+print(var_a,var_b)
